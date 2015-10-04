@@ -1,7 +1,8 @@
 FROM linuxserver/baseimage.python
 MAINTAINER Your Name <your@email.com>
 
-RUN pip install -U comictagger && \
+RUN pip install -U configparser && \
+pip install -U comictagger && \
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 
