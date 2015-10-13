@@ -8,7 +8,6 @@ curl -s https://bootstrap.pypa.io/get-pip.py | python - && \
 pip install -U comictagger && \
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
-
 #Adding Custom files
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
