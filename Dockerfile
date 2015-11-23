@@ -1,7 +1,8 @@
 FROM linuxserver/baseimage.python
 MAINTAINER Your Name <your@email.com>
-
+ENV APTLIST="python2.7"
 RUN add-apt-repository ppa:fkrull/deadsnakes-python2.7 && \
+apt-get install $APTLIST -qy && \
 pip install -U configparser && \
 pip install -U comictagger && \
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
