@@ -1,7 +1,8 @@
 FROM linuxserver/baseimage.python
 MAINTAINER Your Name <your@email.com>
 
-RUN pip install -U configparser && \
+RUN add-apt-repository ppa:fkrull/deadsnakes-python2.7 && \
+pip install -U configparser && \
 pip install -U comictagger && \
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
