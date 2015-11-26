@@ -2,25 +2,27 @@
 
 The [LinuxServer.io](https://www.linuxserver.io/) team brings you another quality container release featuring auto-update on startup, easy user mapping and community support. Be sure to checkout our [forums](https://forum.linuxserver.io/index.php) or for real-time support our [IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
 
-# linuxserver/<container-name>
+# linuxserver/mylar
 
-<Provide a short, concise description of the application. No more than two SHORT paragraphs. Link to sources where possible and include an image illustrating your point if necessary. Point users to the original applications website, as that's the best place to get support - not here.>
+An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents. [mylar](https://github.com/evilhero/mylar)
 
 ## Usage
 
 ```
-docker create --name=<container-name> -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 1234:1234 linuxserver/<container-name>
+docker create --name=mylar -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 8090:8090 linuxserver/mylar
 ```
 
 **Parameters**
 
-* `-p 4242` - the port(s)
+* `-p 8090` - the port(s)
 * `-v /etc/localhost` for timesync - *optional*
-* `-v /config` -
+* `-v /config` - where mylar should store config files
+* `-v /downloads` - map to your downloads folder
+* `-v /comics` - map to your comics folder
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
-It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it <container-name> /bin/bash`.
+It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it mylar /bin/bash`.
 
 ### User / Group Identifiers
 
@@ -30,16 +32,18 @@ Part of what makes our containers work so well is by allowing you to specify you
 
 ## Setting up the application 
 
-<Insert a basic user guide here to get a n00b up and running with the software inside the container.> DELETE ME
+The web ui for settings etc, is on :8090.
+For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 
 ## Updates
 
-* Upgrade to the latest version simply `docker restart <container-name>`.
-* To monitor the logs of the container in realtime `docker logs -f <container-name>`.
+* Upgrade to the latest version simply `docker restart mylar`.
+* To monitor the logs of the container in realtime `docker logs -f mylar`.
 
 
 
 ## Versions
 
 + **dd.MM.yyyy:** This is the standard Version type now. 
+
