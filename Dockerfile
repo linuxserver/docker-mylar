@@ -2,10 +2,10 @@ FROM linuxserver/baseimage.python
 
 MAINTAINER Sparklyballs <sparklyballs@linuxserver.io>
 
+ENV PIPLIST="configparser comictagger"
+
 # install packages
-RUN apt-get install $APTLIST -qy && \
-pip install -U configparser && \
-pip install -U comictagger && \
+RUN pip install -U $PIPLIST && \
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 #Adding Custom files
