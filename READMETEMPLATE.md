@@ -32,7 +32,7 @@ Part of what makes our containers work so well is by allowing you to specify you
 
 ## Setting up the application 
 
-The web ui for settings etc, is on :8090.
+The web ui for settings etc, is on `<your-ip>:8090`
 For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 
