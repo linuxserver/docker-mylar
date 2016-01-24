@@ -9,7 +9,10 @@ An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and to
 ## Usage
 
 ```
-docker create --name=mylar -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 8090:8090 linuxserver/mylar
+docker create --name=mylar -v /etc/localtime:/etc/localtime:ro \
+-v <path to data>:/config -v <downloads-folder>:/downloads \
+-v <comics-folder>:/comics -e PGID=<gid> -e PUID=<uid>  \
+-p 8090:8090 linuxserver/mylar
 ```
 
 **Parameters**
