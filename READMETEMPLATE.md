@@ -45,5 +45,5 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 ## Versions
 
-+ **dd.MM.yyyy:** This is the standard Version type now. 
++ **dd.MM.yyyy:** Initial Release. 
 
