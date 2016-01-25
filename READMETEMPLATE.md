@@ -48,5 +48,6 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 ## Versions
 
-+ **dd.MM.yyyy:** Initial Release. 
++ **26.01.2016:** Initial Release.
+ 
 
