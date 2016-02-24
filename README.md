@@ -9,16 +9,21 @@ An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and to
 ## Usage
 
 ```
-docker create --name=mylar -v /etc/localtime:/etc/localtime:ro \
--v <path to data>:/config -v <downloads-folder>:/downloads \
--v <comics-folder>:/comics -e PGID=<gid> -e PUID=<uid>  \
--p 8090:8090 linuxserver/mylar
+docker create \
+    --name=mylar \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v <path to data>:/config \
+    -v <downloads-folder>:/downloads \
+    -v <comics-folder>:/comics \
+    -e PGID=<gid> -e PUID=<uid> \
+    -p 8090:8090 \
+    linuxserver/mylar
 ```
 
 **Parameters**
 
 * `-p 8090` - the port(s)
-* `-v /etc/localhost` for timesync - *optional*
+* `-v /etc/localtime` for timesync - *optional*
 * `-v /config` - where mylar should store config files
 * `-v /downloads` - map to your downloads folder
 * `-v /comics` - map to your comics folder
@@ -33,7 +38,7 @@ It is based on phusion-baseimage with ssh removed, for shell access whilst the c
 
 Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.
 
-## Setting up the application 
+## Setting up the application
 
 The web ui for settings etc, is on `<your-ip>:8090`
 For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
@@ -49,5 +54,3 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 ## Versions
 
 + **26.01.2016:** Initial Release.
- 
-
