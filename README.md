@@ -11,11 +11,11 @@ An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and to
 ```
 docker create \
     --name=mylar \
-    -v /etc/localtime:/etc/localtime:ro \
     -v <path to data>:/config \
     -v <downloads-folder>:/downloads \
     -v <comics-folder>:/comics \
     -e PGID=<gid> -e PUID=<uid> \
+    -e TZ=<timezone> \
     -p 8090:8090 \
     linuxserver/mylar
 ```
@@ -23,14 +23,14 @@ docker create \
 **Parameters**
 
 * `-p 8090` - the port(s)
-* `-v /etc/localtime` for timesync - *optional*
 * `-v /config` - where mylar should store config files
 * `-v /downloads` - map to your downloads folder
 * `-v /comics` - map to your comics folder
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
+* `-e TZ` for setting timezone information, eg Europe/London
 
-It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it mylar /bin/bash`.
+It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it mylar /bin/bash`.
 
 ### User / Group Identifiers
 
@@ -53,4 +53,5 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 ## Versions
 
-+ **26.01.2016:** Initial Release.
++ **04.07.16:** Rebase to alpine linux for smaller image.
++ **26.01.16:** Initial Release.

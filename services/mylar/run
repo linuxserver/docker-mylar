@@ -1,2 +1,0 @@
-#!/bin/bash
-exec /sbin/setuser abc python /app/mylar/Mylar.py --nolaunch --datadir /config/mylar
