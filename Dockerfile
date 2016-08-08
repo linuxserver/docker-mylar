@@ -8,10 +8,9 @@ RUN \
 	configparser && \
 
 # cleanup
- rm -rfv \
+ rm -rf \
 	/root/.cache \
-	/tmp/* \
-	/var/cache/apk/*
+	/tmp/*
 
 # add local files
 COPY root/ /
