@@ -1,18 +1,20 @@
-FROM linuxserver/baseimage.python
+FROM lsiobase/alpine.python
+MAINTAINER sparklyballs
 
-MAINTAINER Sparklyballs <sparklyballs@linuxserver.io>
+# install pip packages
+RUN \
+ pip install --no-cache-dir -U \
+	comictagger \
+	configparser && \
 
-ENV PIPLIST="configparser comictagger"
+# cleanup
+ rm -rf \
+	/root/.cache \
+	/tmp/*
 
-# install packages
-RUN pip install -U $PIPLIST && \
-apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
+# add local files
+COPY root/ /
 
-#Adding Custom files
-ADD init/ /etc/my_init.d/
-ADD services/ /etc/service/
-RUN chmod -v +x /etc/service/*/run && chmod -v +x /etc/my_init.d/*.sh
-
-# Volumes and Ports
+# ports and volumes
 VOLUME /config /comics /downloads
 EXPOSE 8090

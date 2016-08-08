@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p /config/{mylar,scripts}
+
+# install app
+[[ ! -d /app/mylar/.git ]] && \
+	git clone https://github.com/evilhero/mylar.git /app/mylar
+
+# copy scripts folder to config
+[[ ! -d /config/scripts/sabnzbd ]] && \
+	cp -pr /app/mylar/post-processing/* /config/scripts/
+
+# permissions
+chown -R abc:abc \
+	/app \
+	/config
