@@ -6,6 +6,10 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 * [Podcast](https://www.linuxserver.io/index.php/category/podcast/) covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/mylar
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/mylar.svg)][hub]
+[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/mylar.svg)][hub]
+[![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-mylar)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-mylar/)
+[hub]: https://hub.docker.com/r/linuxserver/mylar/
 
 An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents. [mylar](https://github.com/evilhero/mylar)
 
@@ -57,5 +61,6 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 ## Versions
 
++ **28.08.16:** Add badges to README.
 + **08.08.16:** Rebase to alpine linux.
 + **26.01.16:** Initial Release.
