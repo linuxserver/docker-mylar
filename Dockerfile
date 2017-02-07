@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python
+FROM lsiobase/alpine.python:3.5
 MAINTAINER sparklyballs
 
 # set version label
@@ -10,7 +10,8 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 RUN \
  pip install --no-cache-dir -U \
 	comictagger \
-	configparser && \
+	configparser \
+	tzlocal && \
 
 # cleanup
  rm -rf \
