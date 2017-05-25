@@ -81,6 +81,7 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 ## Versions
 
++ **25.05.17:** Rebase to alpine 3.6.
 + **19.02.17:** Use quiet option for cleaner console log,
 app logs to file anyways.
 + **07.02.17:** Rebase to alpine 3.5.
