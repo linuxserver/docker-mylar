@@ -13,6 +13,9 @@ RUN \
 	configparser \
 	tzlocal && \
 
+# install app
+ git clone --depth 1 https://github.com/evilhero/mylar.git /app/mylar && \
+
 # cleanup
  rm -rf \
 	/root/.cache \
