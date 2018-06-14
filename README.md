@@ -81,6 +81,7 @@ For more detailed setup refer [mylar](https://github.com/evilhero/mylar).
 
 ## Versions
 
++ **14.06.18:** Add `requests` python package
 + **12.12.17:** Rebase to alpine 3.7.
 + **21.07.17:** Internal git pull instead of at runtime.
 + **25.05.17:** Rebase to alpine 3.6.
