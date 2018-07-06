@@ -11,6 +11,7 @@ RUN \
  pip install --no-cache-dir -U \
 	comictagger \
 	configparser \
+	html5lib \
 	requests \
 	tzlocal && \
  echo "**** install app ****" && \
