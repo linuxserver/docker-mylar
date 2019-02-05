@@ -63,3 +63,7 @@ unzip unzip-6.0-r4
 libgd libgd-2.2.5-r1
 vnstat vnstat-1.18-r0
 wget wget-1.20.1-r0
+c-ares c-ares-1.14.0-r0
+http-parser http-parser-2.8.1-r0
+libuv libuv-1.20.2-r0
+nodejs nodejs-8.14.0-r0
