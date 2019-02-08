@@ -13,6 +13,7 @@ LABEL maintainer="sparklyballs"
 RUN \
  echo "**** install system packages ****" && \
  apk add --no-cache \
+	git \
 	nodejs && \
  echo "**** install pip packages ****" && \
  pip install --no-cache-dir -U \
@@ -25,14 +26,9 @@ RUN \
 	MYLAR_COMMIT=$(curl -sX GET https://api.github.com/repos/evilhero/mylar/commits/master \
 	| awk '/sha/{print $4;exit}' FS='[""]'); \
  fi && \
- mkdir -p \
-   /app/mylar && \
- curl -o \
- /tmp/mylar.tar.gz -L \
-	"https://github.com/evilhero/mylar/archive/${MYLAR_COMMIT}.tar.gz" && \
- tar xf \
- /tmp/mylar.tar.gz -C \
-	/app/mylar --strip-components=1 && \
+ git clone https://github.com/evilhero/mylar.git /app/mylar && \
+ cd /app/mylar && \
+ git checkout ${MYLAR_COMMIT} && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/root/.cache \
