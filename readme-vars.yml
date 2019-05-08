@@ -34,6 +34,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "08.05.19:", desc: "Re-install requests pip package to downgrade urllib version suitable for mylar." }
   - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
   - { date: "22.02.19:", desc: "Rebasing to alpine 3.9." }
   - { date: "11.02.19:", desc: "Pipeline logic and multi arch."}
