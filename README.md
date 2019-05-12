@@ -180,6 +180,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **08.05.19:** - Re-install requests pip package to downgrade urllib version suitable for mylar.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **22.02.19:** - Rebasing to alpine 3.9.
 * **11.02.19:** - Pipeline logic and multi arch.
