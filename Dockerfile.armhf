@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-python:arm32v7-3.11
+FROM ghcr.io/linuxserver/baseimage-alpine-python:arm32v7-3.11
 
 # set version label
 ARG BUILD_DATE
