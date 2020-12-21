@@ -31,7 +31,7 @@ Find us at:
 [![GitHub Stars](https://img.shields.io/github/stars/linuxserver/docker-mylar.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/linuxserver/docker-mylar)
 [![GitHub Release](https://img.shields.io/github/release/linuxserver/docker-mylar.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/linuxserver/docker-mylar/releases)
 [![GitHub Package Repository](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=linuxserver.io&message=GitHub%20Package&logo=github)](https://github.com/linuxserver/docker-mylar/packages)
-[![GitLab Container Registry](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=linuxserver.io&message=GitLab%20Registry&logo=gitlab)](https://gitlab.com/Linuxserver.io/docker-mylar/container_registry)
+[![GitLab Container Registry](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=linuxserver.io&message=GitLab%20Registry&logo=gitlab)](https://gitlab.com/linuxserver.io/docker-mylar/container_registry)
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/linuxserver/mylar.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge)](https://microbadger.com/images/linuxserver/mylar "Get your own version badge on microbadger.com")
 [![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/mylar.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/linuxserver/mylar)
 [![Docker Stars](https://img.shields.io/docker/stars/linuxserver/mylar.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/linuxserver/mylar)
@@ -147,6 +147,8 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
+THIS IMAGE IS DEPRECATED. Please migrate to [Mylar3](https://github.com/linuxserver/docker-mylar3).
+
 The web ui for settings etc, is on `<your-ip>:8090`
 For more detailed setup refer [Mylar](https://github.com/evilhero/mylar).
 
@@ -222,6 +224,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **21.12.20:** - Deprecated. Please migrate to [Mylar3](https://github.com/linuxserver/docker-mylar3).
 * **19.12.19:** - Rebasing to alpine 3.11.
 * **28.06.19:** - Rebasing to alpine 3.10.
 * **08.05.19:** - Re-install requests pip package to downgrade urllib version suitable for mylar.

@@ -29,11 +29,14 @@ param_ports:
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
+  THIS IMAGE IS DEPRECATED. Please migrate to [Mylar3](https://github.com/linuxserver/docker-mylar3).
+  
   The web ui for settings etc, is on `<your-ip>:8090`
   For more detailed setup refer [{{ project_name|capitalize }}]({{ project_url }}).
 
 # changelog
 changelogs:
+  - { date: "21.12.20:", desc: "Deprecated. Please migrate to [Mylar3](https://github.com/linuxserver/docker-mylar3)." }
   - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
   - { date: "28.06.19:", desc: "Rebasing to alpine 3.10." }
   - { date: "08.05.19:", desc: "Re-install requests pip package to downgrade urllib version suitable for mylar." }
