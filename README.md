@@ -147,6 +147,8 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
+THIS IMAGE IS DEPRECATED. Please migrate to [Mylar3](https://github.com/linuxserver/docker-mylar3).
+
 The web ui for settings etc, is on `<your-ip>:8090`
 For more detailed setup refer [Mylar](https://github.com/evilhero/mylar).
 
@@ -222,6 +224,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **21.12.20:** - Deprecated. Please migrate to [Mylar3](https://github.com/linuxserver/docker-mylar3).
 * **19.12.19:** - Rebasing to alpine 3.11.
 * **28.06.19:** - Rebasing to alpine 3.10.
 * **08.05.19:** - Re-install requests pip package to downgrade urllib version suitable for mylar.
